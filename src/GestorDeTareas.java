@@ -19,10 +19,14 @@ public class GestorDeTareas {
 
             switch (opcion) {
                 case 1:
-                    System.out.println("Escribe la tarea:");
-                    sc.nextLine();
-                    String tarea = sc.nextLine();
+                System.out.println("Escribe la tarea:");
+                sc.nextLine();
+                String tarea = sc.nextLine();
+                if (!tarea.trim().isEmpty()) {
                     tareas.add(tarea);
+                } else {
+                    System.out.println("La tarea no puede estar vacía.");
+                }            
                     break;
                 case 2:
                     System.out.println("Tareas: " + tareas);
