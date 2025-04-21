@@ -2,6 +2,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class GestorDeTareas {
+    public static int contarTareas(ArrayList<String> lista) {
+        return lista.size();
+    }
     public static void main(String[] args) {
         ArrayList<String> tareas = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
@@ -29,7 +32,8 @@ public class GestorDeTareas {
                 }            
                     break;
                 case 2:
-                    System.out.println("Tareas: " + tareas);
+                      System.out.println("Tareas: " + tareas);
+                      System.out.println("Total: " + contarTareas(tareas));
                     break;
             }
         } while (opcion != 3);
